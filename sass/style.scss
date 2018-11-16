@@ -1,0 +1,320 @@
+$color1: #ffffff;
+$color2: #fbcc4b;
+$color3: #242a31;
+$light: 300;
+$regular: 400;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+html {
+	width: 2480px;
+	height: 3508px;
+}
+.container {
+	width: 2480px;
+	height: 3508px;
+	#bl1 {
+		width: 100%;
+		height: 638px;
+		margin: 0px;
+		padding: 0px;
+		background-color: $color1;
+		position: relative;
+		z-index: 0;
+		#yellow {
+			width: 207px;
+			height: 212px;
+			background-color: $color2;
+			position: absolute;
+			right: 0px;
+			top: 239px;
+		}
+		#awarded {
+			width: 1200px;
+			height: 212px; 
+			font-size: 66.96px;
+			font-weight: $extra-bold;
+			text-align: right;
+			color: $color2;
+			position: absolute;
+			top: 250px;
+			right: 280px;
+		}
+	}
+	#bl2 {
+		p {
+			padding: 0px;
+			margin: 0px;
+		}
+		width: 100%;
+		height: 1044px;
+		margin: 0px;
+		padding: 0px;
+		background-color: $color3;
+		position: relative;
+		z-index: 0;
+		#gray {
+			width: 828px;
+			height: 44px;
+			margin: 0px;
+			padding: 0px;
+			background-color: #b8b5b4;
+			position: relative;
+			top: 0px;
+			left: 1652px;
+		}
+		@mixin big-white-text {
+			width: 100%;
+			font-size: 71.1pt;
+			font-weight: $regular;
+			color: $color1;
+			padding-right: 200px;
+			text-align: right;
+		}
+		#corporate {
+			@include big-white-text;
+			margin-top: 140px;
+		}
+		#business {
+			font-size: 129.66pt;
+			font-weight: $extra-bold;
+			color: $color2;
+			padding-right: 200px;
+			text-align: right;
+		}
+		#flyer {
+			@include big-white-text;
+			margin-bottom: 110px;	
+		}
+		#Id1 {
+			font-size: 26.58pt;
+			font-weight: $regular;
+			color: $color1;
+			padding-right: 200px;
+			text-align: justify;
+			text-align-last: right;
+			padding-left: 1100px;
+		}
+	}
+	#bl3 {
+		p {
+			padding: 0px;
+			margin: 0px;
+		}
+		width: 100%;
+		height: 1441px;
+		position: relative;
+		z-index: 0;
+		@mixin text-pos {
+			position: relative;
+			top: -1425px;
+		}
+		#white1 {
+			width: 44px;
+			height: 143px;
+			background-color: $color1;
+			position: relative;
+			top: -1410px;
+			left: 2220px;
+			z-index: 2;
+		}
+		@mixin big-text {
+			font-size: 129.66pt;
+			font-weight: $extra-bold;
+			color: $color1;
+			text-align: right;
+			padding-right: 206px;
+			padding-bottom: 80px;
+			z-index: 2;
+		}
+		@mixin color($color) {
+			font-size: 26.58pt;
+			font-weight: $bold;
+			text-align: justify;
+			color: $color;
+			text-align-last: right;
+			padding-right: 206px;
+			padding-left: 1170px; 
+			position: relative;
+			top: -1410px;
+			z-index: 2;
+		}
+		#headline {
+			@include text-pos;
+			@include big-text;
+		}
+		#_360 {
+			@include text-pos;
+			@include big-text;
+			padding-top: 80px;
+			padding-bottom: 35px;
+		}
+		#Id2 {
+			@include color($color1);
+			padding-bottom: 40px;
+		}
+		#Id3 {
+			@include color($color3);
+		}
+	}
+	#bl4 {
+		width: 100%;
+		height: 385px;
+		background-color: $color3;
+		position: relative;
+		@mixin logo($width, $margin-left) {
+			width: $width;
+			height: 117px;
+			margin-top: 124px;
+			margin-left: $margin-left;
+			display: inline-block;
+			position: relative;
+			z-index: 2;
+		}
+		#logo1 {
+			@include logo(313px, 1166px);
+		}
+		#logo2 {
+			@include logo(111px, 91px);
+		}
+		#logo3 {
+			@include logo(135px, 125px);
+		}
+		#logo4 {
+			@include logo(170px, 124px);
+		}
+	}
+	#bl5 {
+		width: 880px;
+		height: 1004px;
+		background-color: $color3;
+		position: relative;
+		top: -1239px;
+		left: 0px;
+		z-index: 1;
+		@mixin contact-pos($height, $margin-top) {
+			width: 683px;
+			height: $height;
+			margin-left: 197px;
+			margin-top: $margin-top;
+			line-height: $height;
+			position: relative;
+			top: 300px;
+			.icon {
+				float: left;
+			}
+			.infor {
+				font-size: 29.85pt;
+				font-weight: $regular;
+				color: $color1;
+				padding-left: 150px;
+			}
+		}
+		#locate {
+			@include contact-pos(91px, 235px);
+		}
+		#phone {
+			@include contact-pos(63px, 95px);
+		}
+		#mail {
+			@include contact-pos(56px, 108px);
+		}
+		#web {
+			width: 100%;
+			font-size: 32.28pt;
+			font-weight: $bold;
+			color: $color2;
+			margin-top: 150px;
+			text-align: center;
+			position: relative;
+			top: 300px;
+		}
+	}
+	#bl6 {
+		p {
+			padding: 0px;
+			margin: 0px;
+		}
+		width: 689px;
+		height: 2504px;
+		background-color: $color2;
+		opacity: 0.8;
+		position: absolute;
+		top: 0px;
+		left: 191px;
+		z-index: 1;
+		@mixin block($height) {
+			width: 689px;
+			height: $height;
+			position: relative;
+		}
+		@mixin text-stype($font-size, $font-weight) {
+			width: 100%;
+			font-size: $font-size;
+			font-weight: $font-weight;
+			color: $color1;
+			text-align: left;
+			margin-left: 112px;
+		}
+		@mixin white-block($top) {
+			width: 143px;
+			height: 44px;
+			background-color: $color1;
+			position: relative;
+			margin-left: 112px;
+			top: $top;
+		}
+		#bl6-1 {
+			@include block(638px);
+			#hey {
+				@include text-stype(144.66pt, $extra-bold);
+				padding-top: 165px;
+			}
+			#design {
+				@include text-stype(40.74pt, $light);
+			}
+		}
+		#bl6-2 {
+			@include block(1044px);
+			#white2 {
+				@include white-block(562px);
+			}
+			#Id4 {
+				@include text-stype(26.58pt, $regular);
+				position: relative;
+				top: 562px;
+				padding-top: 50px;
+				padding-right: 150px;
+			}
+		}
+		#bl6-3 {
+			@include block(822px);
+			#white3 {
+				@include white-block(235px);
+			}
+			#our {
+				@include text-stype(49.56pt, $semi-bold);
+				position: relative;
+				top: 235px;
+				padding-top: 90px;
+				padding-right: 200px;
+			}
+		}	
+	}
+	#bl7 {
+		width: 1599px;
+		height: 1826px;
+		background-color: #9fd3ee;
+		opacity: 0.1;
+		position: relative;
+		top: -3065px;
+		left: 880px;
+		z-index: 1;
+	}
+}
